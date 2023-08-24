@@ -68,68 +68,71 @@ class MainApp extends StatelessWidget {
             ],
           ),
         ),
-        body: Column(
-          children: [
-            const SizedBox(height: 30), // Espacio en blanco
-            Center(
-              child: Container(
-                width: 336,
-                height: 166,
-                decoration: ShapeDecoration(
-                  image: const DecorationImage(
-                    image: AssetImage("../lib/resources/futbol7.jpeg"),
-                    fit: BoxFit.cover,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 30),
-
-            Center(
-              child: Container(
-                width: 336,
-                height: 166,
-                decoration: ShapeDecoration(
-                  image: const DecorationImage(
-                    image: AssetImage("../lib/resources/basketball.jpeg"),
-                    fit: BoxFit.cover,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 30),
-
-            Center(
-              child: Container(
-                width: 336,
-                height: 166,
-                decoration: BoxDecoration(
-                  color: const Color(0xFF1A73E9),
-                  borderRadius: BorderRadius.circular(20),
-                  image: const DecorationImage(
-                    image: NetworkImage("https://via.placeholder.com/336x166"),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                child: const Center(
-                  child: Text(
-                    "Torneo Futbol 7...",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(height: 30), // Espacio en blanco
+              Center(
+                child: Container(
+                  width: 336,
+                  height: 166,
+                  decoration: ShapeDecoration(
+                    image: const DecorationImage(
+                      image: AssetImage("../lib/resources/futbol7.jpeg"),
+                      fit: BoxFit.cover,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                 ),
               ),
-            ),
-          ],
+              const SizedBox(height: 30),
+
+              Center(
+                child: Container(
+                  width: 336,
+                  height: 166,
+                  decoration: ShapeDecoration(
+                    image: const DecorationImage(
+                      image: AssetImage("../lib/resources/basketball.jpeg"),
+                      fit: BoxFit.cover,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 30),
+
+              Center(
+                child: Container(
+                  width: 336,
+                  height: 166,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF1A73E9),
+                    borderRadius: BorderRadius.circular(20),
+                    image: const DecorationImage(
+                      image:
+                          NetworkImage("https://via.placeholder.com/336x166"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Torneo Futbol 7...",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
