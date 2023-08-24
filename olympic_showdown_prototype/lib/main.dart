@@ -5,14 +5,57 @@ void main() {
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  const MainApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        backgroundColor: Color(0xFF135BBA),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: Container(
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0),
+              borderRadius: BorderRadius.circular(20.0),
+              border: Border.all(
+                  color: Colors.white, width: 1.0), // Borde de color blanco
+            ),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Row(
+              children: [
+                Icon(Icons.search, color: Colors.black),
+                SizedBox(width: 8.0),
+                Expanded(
+                  child: TextField(
+                    style: TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                      hintText: "Search",
+                      hintStyle:
+                          TextStyle(color: Colors.white.withOpacity(0.7)),
+                      border: InputBorder.none,
+                      contentPadding: EdgeInsets.all(12.0),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.add),
+              onPressed: () {
+                // Acción para agregar
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.delete),
+              onPressed: () {
+                // Acción para bote de basura
+              },
+            ),
+          ],
         ),
       ),
     );
